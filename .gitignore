@@ -1,9 +1,6 @@
 # Compiled class file
 *.class
 
-# Netbeans Properties
-*.properties
-
 
 # Manifest
 *.mf
