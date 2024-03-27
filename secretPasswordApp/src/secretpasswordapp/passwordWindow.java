@@ -113,11 +113,15 @@ public class passwordWindow extends javax.swing.JFrame {
         “12345678”, caso contrario el mensaje debe decir “Usuario y/o 
         contraseña incorrectos” .
         */
-//        String mail = txtMail.getText();
-        if(txtMail.getText().equalsIgnoreCase("alumno@ulp.edu.ar")
-            && txtPassword.getText().equals("12345678")){
+        String mail = txtMail.getText();
+        String password = txtPassword.getText();
+        if(mail.equalsIgnoreCase("alumno@ulp.edu.ar")
+            && password.equals("12345678")){
             JOptionPane.showMessageDialog(this, "mensaje de bienvenida");
-        }else{
+        }else if(mail.isEmpty() || password.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Los campos mail y password no pueden estar vacios.");
+        }
+        else{
             JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
         }
     }//GEN-LAST:event_jButton1MouseClicked
