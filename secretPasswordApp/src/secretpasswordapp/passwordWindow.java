@@ -106,7 +106,20 @@ public class passwordWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        JOptionPane.showMessageDialog(this, "mensaje de bienvenida");
+        /*
+        Cuando el usuario haga clic en el botón "Registrar", la aplicación debe 
+        mostrar un dialogo emergente (JOptionPane) con un mensaje de bienvenida 
+        si el mail es igual a alumno@ulp.edu.ar y el password es igual a 
+        “12345678”, caso contrario el mensaje debe decir “Usuario y/o 
+        contraseña incorrectos” .
+        */
+//        String mail = txtMail.getText();
+        if(txtMail.getText().equalsIgnoreCase("alumno@ulp.edu.ar")
+            && txtPassword.getText().equals("12345678")){
+            JOptionPane.showMessageDialog(this, "mensaje de bienvenida");
+        }else{
+            JOptionPane.showMessageDialog(this, "Usuario y/o contraseña incorrectos");
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
